@@ -1,4 +1,4 @@
-#Getting Started
+# Getting Started
 
 Welcome to the PinoyFreeCoder's OpenAI Example repository! This repository contains code examples that demonstrate how to use OpenAI's GPT-3 API to generate natural language text.
 Getting Started
