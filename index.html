@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Form</title>
+</head>
+
+<body>
+    <form onsubmit="submitForm(event)">
+      <label for="userInput">Enter your question :</label>
+      <input type="text" id="userInput">
+      <button type="submit">Submit</button>
+    </form>
+    <div id="response"></div>
+    <script>
+        async function submitForm(event){
+            event.preventDefault();
+            const userInput = document.querySelector('#userInput').value;
+            const response = await fetch("/submit", {
+                method : "POST",
+                headers : {
+                    'content-type': 'application/json',
+                },
+                body : JSON.stringify({userInput})
+            });
+
+            const result = await response.text();
+            document.querySelector('#response').innerText = result;
+        }
+    </script>
+</body>
+</html>
