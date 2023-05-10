@@ -23,7 +23,7 @@ API_KEY=YOUR_API_KEY
 
 ## Running the app
 
-To run the app on your and access it on your web browser via http://localhost:3000 
+To run the app on your local machine and access it on your web browser via http://localhost:3000 
 
 ```
 npm run start
